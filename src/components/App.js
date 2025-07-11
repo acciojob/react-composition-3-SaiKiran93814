@@ -4,16 +4,14 @@ import Tooltip from "./Tooltip";
 function App() {
   return (
     <div style={{ padding: "50px" }}>
-      <Tooltip text="This is a tooltip">
-        <button>Hover over me</button>
+      <Tooltip text="Tooltip for heading">
+        <h2>Hover over this heading</h2>
       </Tooltip>
 
       <br /><br />
 
-      <Tooltip text="This is another tooltip">
-        <span style={{ textDecoration: "underline", cursor: "pointer" }}>
-          Hover over me to see another tooltip
-        </span>
+      <Tooltip text="Tooltip for paragraph">
+        <p>Hover over this paragraph</p>
       </Tooltip>
     </div>
   );
