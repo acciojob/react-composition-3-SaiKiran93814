@@ -10,7 +10,7 @@ function App() {
 
       <br /><br />
 
-      <Tooltip text="This is a another tooptip">
+      <Tooltip text="This is a another tooltip">
         <span style={{ textDecoration: "underline", cursor: "pointer" }}>
           Hover over me to see another tooltip
         </span>
