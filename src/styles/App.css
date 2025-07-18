@@ -1,21 +1,18 @@
-
 .tooltip {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .tooltiptext {
-  visibility: visible;
   position: absolute;
-  bottom: 125%;
+  top: 120%;
   left: 50%;
   transform: translateX(-50%);
-  background-color:red;
-  color: #fff;
-  padding: 6px 8px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
   border-radius: 4px;
   white-space: nowrap;
-  font-size: 14px;
-  z-index: 100;
-  opacity: 0.9;
+  z-index: 10;
 }

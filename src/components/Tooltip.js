@@ -2,21 +2,20 @@ import React, { useState, cloneElement } from "react";
 import "../styles/App.css";
 
 const Tooltip = ({ text, children }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
-  const tooltipSpan = isVisible ? (
-    <span className="tooltiptext">{text}</span>
+  const tooltipElement = visible ? (
+    <div className="tooltiptext">{text}</div>
   ) : null;
 
-  // Clone the child and inject event handlers + class + tooltip span
   return cloneElement(children, {
     className: `${children.props.className || ""} tooltip`.trim(),
-    onMouseEnter: () => setIsVisible(true),
-    onMouseLeave: () => setIsVisible(false),
+    onMouseEnter: () => setVisible(true),
+    onMouseLeave: () => setVisible(false),
     children: (
       <>
         {children.props.children}
-        {tooltipSpan}
+        {tooltipElement}
       </>
     ),
   });
